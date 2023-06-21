@@ -19,7 +19,8 @@ let intervalID;
 welcomeBtn.addEventListener("click", () => {
     showQuiz.classList.add("showQuiz");
     startPage.style.display = "none";
-
+    //executes function "countdown" every 1000ms to update time and display on page
+    intervalID = setInterval(countdown, 1000);
 })
 
 //ends here
@@ -76,8 +77,7 @@ function hideResultText() {
 
         } else {
             endQuiz()
-            showQuiz.classList.remove("showQuiz");
-            resultDiv.style.display = "block";
+           
         }
     }, 1000)
 }
@@ -91,8 +91,7 @@ function startQuiz() {
     currentQuestion = 0;
     displayQuestion()
 
-     //executes function "countdown" every 1000ms to update time and display on page
-     intervalID = setInterval(countdown, 1000);
+    
 
      // //invoke displayTime here to ensure time appears on the page as soon as the start button is clicked, not after 1 second
       displayTime();
@@ -112,7 +111,7 @@ function countdown() {
 
     if (time < 1) {
         endQuiz()
-        // resultDiv.style.display = "block";
+        
     }
 }
 
@@ -167,7 +166,7 @@ answerBtn.forEach((v, i) => {
                     time = 0;
                     displayTime();
                     endQuiz()
-                    resultDiv.style.display = "block";
+                    
                 }
             }
         } else {
@@ -184,6 +183,8 @@ answerBtn.forEach((v, i) => {
 let scoreCount = document.querySelector("#result p span")
 function endQuiz() {
     clearInterval(intervalID);
+    showQuiz.classList.remove("showQuiz");
+    resultDiv.style.display = "block";
     scoreCount.textContent = time
 }
 

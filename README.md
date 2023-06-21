@@ -82,12 +82,13 @@ To install this code, download the zip file, or use GitHub's guidelines to clone
 * Highscores retreived local storage
 
 ### This project has media Queries for:
-* max-width: 980px 
+
+* max-width: 991px 
     * Adjusts body and container width
-* max-width: 786px
+* max-width: 767px
     * Adjusts body and container width
     * Adjusts buttons
-* max-width: 640px
+* max-width: 567px
     * Adjusts body and container width
     * Adjusts buttons to be centered and stacked
 

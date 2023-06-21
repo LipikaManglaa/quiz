@@ -1,0 +1,49 @@
+@media screen and (min-width: 200px) and (max-width:567px){
+    #welcome-quiz {
+       width: 80%;
+        margin: 30px auto 0px auto;
+    }
+    .header-score a {
+               font-size: 17px;
+    }
+    .header-score {
+        width: 185px;
+        height: 35px;
+        line-height: 35px;
+}
+.question {
+        font-size: 16px;
+}
+.highscore {
+    width: 80%;
+  margin: 40px auto 0px auto;
+}
+}
+@media screen and (min-width: 568px) and (max-width:767px){
+    #welcome-quiz {
+       width: 80%;
+        margin: 30px auto 0px auto;
+    }
+    .header-score a {
+        font-size: 17px;
+}
+.header-score {
+ width: 185px;
+ height: 35px;
+ line-height: 35px;
+}
+.question {
+    font-size: 16px;
+}
+.highscore {
+      width: 80%;
+    margin: 40px auto 0px auto;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width:991px){
+    #welcome-quiz {
+       width: 80%;
+        margin: 30px auto 0px auto;
+    }
+}
