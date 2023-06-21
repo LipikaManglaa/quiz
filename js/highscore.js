@@ -2,8 +2,8 @@ let highscoreBtn = document.querySelector(".btn-highscore ul");
 let goBack = document.querySelector("#goBack");
 let clearScore = document.querySelector("#clearScore");
 
-let getLocalStorageData = JSON.parse(localStorage.getItem("initalName"))
-
+let getLocalStorageData = JSON.parse(localStorage.getItem("initalName")) ??[]
+console.log(getLocalStorageData)
 function getItemHighScore() {
 
   for (var r = 0; r < getLocalStorageData.length; r++) {
@@ -12,8 +12,8 @@ function getItemHighScore() {
     var newListItem = document.createElement("li")
     newListItem.innerHTML = `${r + 1}&nbsp; &nbsp; ${newItem.score}- ${newItem.inital}`
     highscoreBtn.append(newListItem)
-
   }
+ 
 }
 getItemHighScore()
 
@@ -28,3 +28,6 @@ clearScore.addEventListener("click", () => {
   highscoreBtn.innerHTML = " ";
 
 })
+
+
+

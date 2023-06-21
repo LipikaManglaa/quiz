@@ -1,13 +1,19 @@
 // These commands are used for showing one information to another information start here
 let welcomeBtn = document.querySelector("#welcome-quiz button");
 let showQuiz = document.querySelector(".items");
-let startPage = document.querySelector("#welcome-quiz")
+let startPage = document.querySelector("#welcome-quiz");
 
+//for highness score button on click ,go to page highness score page
+let headerScore=document.querySelector(".header-score")
+headerScore.addEventListener("click",()=>{
+    window.location.href="highness-score.html"
+})
 //for time Show up
 let timeShowUp = document.querySelector(".clock")
 
 //result show after submit questions
 let resultDiv = document.querySelector("#result")
+resultDiv.style.display="none";
 let intervalID;
 
 welcomeBtn.addEventListener("click", () => {
@@ -60,7 +66,20 @@ const questions = [
 //hide result div
 function hideResultText() {
 
+    let letchoiceAnswer = document.querySelector(".choices")
+    setTimeout(() => {
+        answerText.innerHTML = "";
+        answer.style.display = "none"
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            displayQuestion();
 
+        } else {
+            endQuiz()
+            showQuiz.classList.remove("showQuiz");
+            resultDiv.style.display = "block";
+        }
+    }, 1000)
 }
 
 
@@ -93,7 +112,7 @@ function countdown() {
 
     if (time < 1) {
         endQuiz()
-        resultDiv.style.display = "block";
+        // resultDiv.style.display = "block";
     }
 }
 
@@ -132,11 +151,11 @@ answerBtn.forEach((v, i) => {
             if (optionGet === questions[currentQuestion].answer) {
 
                 answerText.textContent = "Correct!";
-              
+                hideResultText()
                 
             } else {
                 answerText.textContent = "Incorrect";
-
+                hideResultText()
                 if (time >= 15) {
                     time = time - 15;
                     displayTime();
@@ -155,21 +174,7 @@ answerBtn.forEach((v, i) => {
             alert("already selected")
         }
 
-        let letchoiceAnswer = document.querySelector(".choices")
-        setTimeout(() => {
-            answerText.innerHTML = "";
-            answer.style.display = "none"
-
-            currentQuestion++;
-            if (currentQuestion < questions.length) {
-                displayQuestion();
-
-            } else {
-                endQuiz()
-                showQuiz.classList.remove("showQuiz");
-                resultDiv.style.display = "block";
-            }
-        }, 1000)
+       
 
     })
 
