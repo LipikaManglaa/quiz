@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+</head>
+
+<body>
+    <main>
+
+        <!-- Header Sectino start here -->
+        <header>
+            <div class="header-score">
+                <a href="highness-score.html" target="_blank">Highness Score</a>
+            </div>
+        </header>
+        <!-- header Section ends heres -->
+        <!-- These below lines are welcome quiz starts here -->
+        <section id="welcome-quiz">
+            <h2>Welcome to Coding Quiz Challenge</h2>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mid that incorrect
+                answers will penalize your score/time by fifteen seconds!</p>
+
+            <button>Start Quiz</button>
+        </section>
+        <!-- Ends here -->
+        <!-- These below lines are answer option start here -->
+        <section class="items">
+            <div class="list-item">
+                <div class="quest-time">
+                    <div class="question">
+                    </div>
+                    <div class="clock">
+                    </div>
+                </div>
+                <div class="choices">
+                    <button class="btn answerbtn"></button>
+                    <button class="btn answerbtn"></button>
+                    <button class="btn answerbtn"></button>
+                    <button class="btn answerbtn"></button>
+                </div>
+                <div class="answer">
+                    <h3 class="answer-text"></h3>
+                </div>
+            </div>
+        </section>
+        <!-- Ends here answer option -->
+        <!-- Result Section start here -->
+      
+        <Section id="result" style="display: none !important;">
+            <div class="message"></div>
+            <h3> All done!</h3>
+            <p>Your final score is&nbsp;<span>0</span> </p>
+            <form id="form-data">
+                <div>
+                    <label>Enter intials:</label>
+                    <input type="text" id="inital" name="inital" id="">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </Section>
+        <!-- Result Section ends here -->
+    </main>
+</body>
+<script src="js/script.js"></script>
+
+</html>
