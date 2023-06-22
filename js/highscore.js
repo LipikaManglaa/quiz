@@ -3,7 +3,7 @@ let goBack = document.querySelector("#goBack");
 let clearScore = document.querySelector("#clearScore");
 
 let getLocalStorageData = JSON.parse(localStorage.getItem("initalName")) ??[]
-console.log(getLocalStorageData)
+
 function getItemHighScore() {
 
   for (var r = 0; r < getLocalStorageData.length; r++) {

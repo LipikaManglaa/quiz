@@ -91,8 +91,6 @@ function startQuiz() {
     currentQuestion = 0;
     displayQuestion()
 
-    
-
      // //invoke displayTime here to ensure time appears on the page as soon as the start button is clicked, not after 1 second
       displayTime();
 }
@@ -172,9 +170,6 @@ answerBtn.forEach((v, i) => {
         } else {
             alert("already selected")
         }
-
-       
-
     })
 
 })
@@ -196,6 +191,7 @@ let message = document.querySelector(".message")
 let inputRecieve;
 let oldData;
 
+//local storage data store
 formData.addEventListener("submit", (e) => {
 
     e.preventDefault()
